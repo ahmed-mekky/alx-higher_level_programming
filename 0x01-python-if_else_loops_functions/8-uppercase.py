@@ -2,6 +2,6 @@
 def uppercase(str):
     for i in range(len(str)):
         if ord(str[i]) < 132 or ord(str[i]) > 96:
-            print("{}").format(chr(ord(str[i + 32])))
+            print("{}").format(chr(ord(str[i]) + 32))
         else:
             print(str[i])
