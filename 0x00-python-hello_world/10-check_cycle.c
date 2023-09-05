@@ -4,7 +4,7 @@
 /**
  * check_cycle - ....
  *
- * @head: the list
+ * @list: the list
  *
  * Return:0 If there is no cycle.
  *        1 If there is a cycle.
@@ -23,6 +23,7 @@ int check_cycle(listint_t *list)
 	{
 		if (temp1 == temp2)
 			return (1);
+
 		temp2 = temp2->next;
 	}
 
