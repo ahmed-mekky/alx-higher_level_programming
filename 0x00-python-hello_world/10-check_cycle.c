@@ -17,14 +17,18 @@ int check_cycle(listint_t *list)
 		return (0);
 
 	temp1 = list;
-	temp2 = list->next;
-
-	while (temp2->next)
+	while (temp1)
 	{
-		if (temp1 == temp2)
-			return (1);
+		temp2 = list->next;
 
-		temp2 = temp2->next;
+		while (temp2->next)
+		{
+			if (temp1 == temp2)
+				return (1);
+
+			temp2 = temp2->next;
+		}
+		temp1 = temp1->next;
 	}
 
 	return (0);
