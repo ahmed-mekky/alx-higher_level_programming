@@ -28,6 +28,8 @@ int check_cycle(listint_t *list)
 
 			temp2 = temp2->next;
 		}
+		if (!temp2)
+			return (0);
 		temp1 = temp1->next;
 	}
 
