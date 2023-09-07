@@ -15,10 +15,13 @@ int check_cycle(listint_t *list)
 
 	temp1 = list;
 
-	while (temp1) {
+	while (temp1)
+	{
 		temp2 = list;
-		while (temp2 != temp1) {
-			if (temp1->next == temp2) {
+		while (temp2 != temp1)
+		{
+			if (temp1->next == temp2)
+			{
 				return (1);
 			}
 			temp2 = temp2->next;
