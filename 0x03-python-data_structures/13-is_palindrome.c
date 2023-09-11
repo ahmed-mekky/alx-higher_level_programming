@@ -8,6 +8,8 @@
 
 int is_palindrome(listint_t **head)
 {
+	if (!*head)
+		return (1);
 	listint_t* first_list = *head;
 	listint_t* sec_list = *head;
 	int x = 1, i, j, k;
