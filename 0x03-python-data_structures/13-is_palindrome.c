@@ -12,6 +12,8 @@ int is_palindrome(listint_t **head)
 	listint_t *sec_list = *head;
 	int x = 1, i, j, k;
 
+	if (!*head)
+		return (1);
 	while (first_list->next)
 	{
 		first_list = first_list->next;
