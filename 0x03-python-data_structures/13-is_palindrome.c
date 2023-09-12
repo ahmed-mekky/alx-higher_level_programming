@@ -19,9 +19,9 @@ int is_palindrome(listint_t **head)
 		list = list->next;
 		array[x++] = list->n;
 	}
-	for (i = 0; i < x / 2 - 1; i++)
+	for (i = 0; i < x / 2; i++)
 	{
-		if (array[i] == array[x - i])
+		if (array[i] != array[x - i - 1])
 			return (0);
 	}
 	
