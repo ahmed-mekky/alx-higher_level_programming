@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 	}
 	for (i = 0; i < x / 2 - 1; i++)
 	{
-		if (array[i] != array[x - i])
+		if (array[i] == array[x - i])
 			return (0);
 	}
 	
