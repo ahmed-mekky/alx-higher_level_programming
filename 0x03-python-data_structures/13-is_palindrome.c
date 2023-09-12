@@ -11,7 +11,7 @@ int is_palindrome(listint_t **head)
 	listint_t *list = *head;
 	int x = 1, i, array[BUFSIZE];
 
-	if (!*head)
+	if (!list)
 		return (1);
 	array[0] = list->n;
 	while (list->next)
@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 	}
 	for (i = 0; i < x / 2 - 1; i++)
 	{
-		if (array[i] == array[x - i])
+		if (array[i] != array[x - i])
 			return (0);
 	}
 	
