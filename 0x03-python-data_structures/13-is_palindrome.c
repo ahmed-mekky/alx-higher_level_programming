@@ -24,6 +24,6 @@ int is_palindrome(listint_t **head)
 		if (array[i] != array[x - i - 1])
 			return (0);
 	}
-	
+
 	return (1);
 }
