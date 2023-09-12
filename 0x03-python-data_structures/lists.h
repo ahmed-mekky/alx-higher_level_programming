@@ -21,4 +21,6 @@ void free_listint(listint_t *head);
 
 int is_palindrome(listint_t **head);
 
+#define BUFSIZE 1024
+
 #endif /* LISTS_H */
