@@ -11,11 +11,11 @@ def roman_to_int(roman_string):
     }
     result = 0
     last_value = 0
-    for num in reversed(roman_string):
+    for num in roman_string:
         value = roman_dict[num]
-        if value < last_value:
+        if value > last_value:
             result += value - last_value * 2
         else:
             result += value
         last_value = value
-    return abs(result)
+    return result
