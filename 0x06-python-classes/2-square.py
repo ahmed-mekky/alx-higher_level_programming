@@ -7,7 +7,7 @@ class Square:
     def __init__(self, size=0):
         """init fun"""
         if type(size) is not int:
-            print("Size must be an integer")
+            raise TypeError("Size must be an integer")
         if size < 0:
-            print('ValueError')
+            raise TypeError('ValueError')
         self.__size = size
