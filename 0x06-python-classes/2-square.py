@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""python OOP"""
+"""Defines a class Square."""
 
 
 class Square:
-    """class"""
+    """Represents a square."""
 
     def __init__(self, size=0):
         """Initializes a Square instance.
