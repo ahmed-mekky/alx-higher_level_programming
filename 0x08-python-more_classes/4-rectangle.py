@@ -47,7 +47,7 @@ class Rectangle:
         if self.width <= 0 or self.height <= 0:
             return var
         for i in range(self.height):
-            var += "#" * self.width + '\n'
+            var += "#" * self.width + ('\n' if i < self.height - 1 else "")
         return var
 
     def __repr__(self):
