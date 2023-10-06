@@ -74,7 +74,7 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) != Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if a == b:
-            return a
+        if a < b:
+            return rect_2
         else:
-            return max(a, b)
+            return rect_1
