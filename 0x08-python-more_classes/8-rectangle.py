@@ -40,6 +40,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    @property
     def area(self):
         return self.__height * self.__width
 
@@ -67,13 +68,13 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
 
     def bigger_or_equal(rect_1, rect_2):
-        if type(rect_1) != type(Rectangle):
+        a = rect_1.area
+        b = rect_2.area
+        if type(rect_1) != Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
-        if type(rect_2) != type(Rectangle):
+        if type(rect_2) != Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area > rect_2.area:
-            return rect_1
-        elif rect_1.area < rect_2.area:
-            return rect_2
+        if a == b:
+            return a
         else:
-            return rect_1
+            return max(a, b)
