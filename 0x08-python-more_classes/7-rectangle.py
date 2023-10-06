@@ -10,10 +10,11 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """initialise the class with attributes of a rectangle."""
+        a = Rectangle.print_symbol
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-        self.print_symbol = Rectangle.print_symbol if Rectangle.print_symbol != [] else "#"
+        self.print_symbol = a if a != [] else "#"
 
     @property
     def width(self):
@@ -49,10 +50,13 @@ class Rectangle:
 
     def __str__(self):
         var = ""
+        a = self.print_symbol
+        b = self.width
+        c = self.height
         if self.width <= 0 or self.height <= 0:
             return var
         for i in range(self.height):
-            var += f"{self.print_symbol}" * self.width + ('\n' if i < self.height - 1 else "")
+            var += f"{a}" * b + ('\n' if i < c - 1 else "")
         return var
 
     def __repr__(self):
