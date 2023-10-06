@@ -6,13 +6,14 @@ class Rectangle:
     """class rectangle"""
 
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = []
 
     def __init__(self, width=0, height=0):
         """initialise the class with attributes of a rectangle."""
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+        self.print_symbol = Rectangle.print_symbol if Rectangle.print_symbol != [] else "#"
 
     @property
     def width(self):
@@ -51,7 +52,7 @@ class Rectangle:
         if self.width <= 0 or self.height <= 0:
             return var
         for i in range(self.height):
-            var += Rectangle.print_symbol * self.width + ('\n' if i < self.height - 1 else "")
+            var += f"{self.print_symbol}" * self.width + ('\n' if i < self.height - 1 else "")
         return var
 
     def __repr__(self):
