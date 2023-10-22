@@ -6,8 +6,12 @@ def matrix_divided(matrix, div):
     """
     Main function
     Args:
+        matrix (list[list]): The input matrix.
+        div (int): The number to divide each element by.
     Raises:
+        ValueError: If the divisor is 0 or if any row has more than one column.
     Return:
+        list[list]: A new matrix with the same dimensions as the original but where every
     """
 
     if type(div) not in (int, float):
