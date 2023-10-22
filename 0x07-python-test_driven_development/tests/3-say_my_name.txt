@@ -1,0 +1,9 @@
+Tests for 3-say_my_name module
+==============================
+
+this module defines a function that prints My name is <first name> <last name> 'say_my_name(first_name, last_name="")'.
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Usage
+=====

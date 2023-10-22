@@ -1,0 +1,9 @@
+Tests for 5-text_indentation module
+==============================
+
+this module defines a function that prints a text with 2 new lines after each of these characters: ., ? and : 'text_indentation(text)'.
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Usage
+=====
