@@ -14,8 +14,10 @@ def matrix_divided(matrix, div):
 
     if type(div) not in (int, float):
         raise TypeError("div must be a number")
-    elif div == 0:
+    if div == 0:
         raise ZeroDivisionError("division by zero")
+    if type(div) is not int and type(div) is not float:
+        raise TypeError("div must be a number")
 
     new_matrix = [[None for _ in range(num_columns)] for _ in range(num_rows)]
 
