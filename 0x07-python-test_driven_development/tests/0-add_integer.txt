@@ -1,0 +1,61 @@
+Tests for 0-add_integer module
+==============================
+
+this module defines a function that adds 2 integers 'add_integer(a, b=98)'.
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+Usage
+=====
+>>> add_integer(1, 1) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+2
+
+>>> add_integer(1, -1) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+0
+
+>>> add_integer(1.0, 3.0) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+4
+
+>>> add_integer(1.2, 3.4) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+4
+
+>>> add_integer(-10, 6.4) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+-4
+
+>>> add_integer(-2, -3.4) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+-5
+
+>>> add_integer('1', 3.4) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
+
+>>> add_integer(5, '7') #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+Traceback (most recent call last):
+   ...
+TypeError: b must be an integer
+
+>>> add_integer('alx', 6) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
+
+>>> add_integer(None, 5.4) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
+
+>>> add_integer(None) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
+
+>>> add_integer(13, None) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+Traceback (most recent call last):
+   ...
+TypeError: b must be an integer
+
+>>> add_integer(None, None) #doctest: +NORMALIZE_WHITESPACE, +ELLIPSIS
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
