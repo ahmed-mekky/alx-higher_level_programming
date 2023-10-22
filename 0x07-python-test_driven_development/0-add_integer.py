@@ -18,4 +18,4 @@ def add_integer(a, b=98):
     elif b is None or type(b) not in (int, float):
         raise TypeError("b must be an integer")
     a, b = round(a), round(b)
-    return a + b
+    return (a + b)
