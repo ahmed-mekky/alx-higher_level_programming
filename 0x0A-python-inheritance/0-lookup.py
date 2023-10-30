@@ -4,6 +4,6 @@ File name: 0-lookup.py
 """
 
 
-def get_attributes_and_methods(obj):
-    """Get all attributes and methods of an object jejcnocnreomnrcmnlcmrdklfcnkecjkd."""
+def lookup(obj):
+    """Get all attributes and methods of an object ."""
     return dir(obj)
