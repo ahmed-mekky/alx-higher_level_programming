@@ -4,7 +4,7 @@ Inheritance Modules
 """
 
 
-def MyList(List):
+class MyList(list):
     """
     This function adds something to the world.
     """
