@@ -8,6 +8,6 @@ def is_same_class(obj, a_class):
     """
     This thing adds something to the world.
     """
-    if issubclass(type(obj), a_class):
+    if isinstance(type(obj), a_class):
         return True
     return False
