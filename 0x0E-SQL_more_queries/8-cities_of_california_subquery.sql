@@ -1,6 +1,8 @@
 -- SQL.
 SELECT cities.id, cities.name
-FROM cities, states
-WHERE cities.state_id = states.id
-AND states.name = 'California'
+WHERE cities.id = (
+	SELECT states.id FROM states
+	WHERE states.name = 'California'
+	LIMIT 1
+)
 ORDER BY cities.id ASC;
