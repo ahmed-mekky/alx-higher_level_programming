@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const argv = process.argv;
 
-if (!Number.isInteger(argv[2])) {
+if (!Number.isInteger(Number.parseInt(argv[2]))) {
   console.log('Missing size');
 }
 
