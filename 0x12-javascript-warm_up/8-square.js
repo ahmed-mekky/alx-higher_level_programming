@@ -2,7 +2,7 @@
 const argv = process.argv;
 
 if (!Number.isInteger(argv[2])) {
-  console.log('Missing size')
+  console.log('Missing size');
 }
 
 let x = '';
