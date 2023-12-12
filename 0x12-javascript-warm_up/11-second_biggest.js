@@ -12,7 +12,6 @@ if (argv.length < 4) {
   const min = Math.min(...x);
   const max = Math.max(...x);
 
-
   let y = min;
   for (let i = 0; i < x.length; i++) {
     if (x[i] > y && x[i] !== max) {
