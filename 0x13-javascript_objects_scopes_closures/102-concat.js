@@ -12,7 +12,7 @@ fs.readFile(argv[2], 'utf8', function(err, data1) {
       return console.log(err);
     }
 
-    let data = data1 + '\n' + data2;
+    let data = data1 + data2;
 
     fs.writeFile(argv[4], data, 'utf8', function(err) {
       if (err) {
