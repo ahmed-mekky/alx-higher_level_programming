@@ -5,4 +5,5 @@ exports.esrever = function (list) {
     list[i] = list[list.length - 1 - i];
     list[list.length - 1 - i] = temp;
   }
+  return list;
 };
