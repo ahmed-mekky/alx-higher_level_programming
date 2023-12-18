@@ -33,7 +33,6 @@ if __name__ == '__main__':
                 states.name LIKE BINARY %(state_name)s
             ORDER BY
                 cities.id ASC
-                """,
-            {'state_name': args[4]})
+                """, {'state_name': args[4]})
     query_rows = cur.fetchall()
     print(", ".join([row[1] for row in query_rows]))
