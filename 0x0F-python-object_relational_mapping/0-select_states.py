@@ -17,7 +17,7 @@ if __name__ == '__main__':
         user=args[1],
         passwd=args[2],
         db=args[3])
-    
+
     cur = conn.cursor()
 
     cur.execute("SELECT * FROM states ORDER BY id ASC")
