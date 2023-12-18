@@ -36,5 +36,4 @@ if __name__ == '__main__':
                 """,
             {'state_name': args[4]})
     query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    print(", ".join([row[1] for row in query_rows]))
