@@ -5,6 +5,9 @@ import sys
 """This script is doing something"""
 
 if __name__ == '__main__':
+    """
+    Access to the database
+    """
     args = sys.argv
 
     conn = MySQLdb.connect(
