@@ -2,6 +2,8 @@
 import MySQLdb
 import sys
 
+"""This script is doing something"""
+
 if __name__ == '__main__':
     args = sys.argv
 
