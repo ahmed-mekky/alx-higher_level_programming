@@ -20,11 +20,21 @@ if __name__ == '__main__':
 
     cur = conn.cursor()
 
-    cur.execute("SELECT cities.id, cities.name \
-            FROM cities JOIN states\
-            ON cities.state_id = states.id\
-            WHERE states.name LIKE BINARY %(state_name)s\
-            ORDER BY cities.id ASC", {'state_name': args[4]})
+    cur.execute("""
+            SELECT
+                cities.id, cities.name
+            FROM
+                cities
+            JOIN
+                states
+            ON
+                cities.state_id = states.id
+            WHERE
+                states.name LIKE BINARY %(state_name)s
+            ORDER BY
+                cities.id ASC
+                """,
+            {'state_name': args[4]})
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
