@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    results = session.query(State).filter(State.name.contains(sys.argv[4])).all()
+    results = session.query(State).filter(State.name.contains(sys.argv[4])).order_by(State.id)
 
     if results:
         for result in results:
