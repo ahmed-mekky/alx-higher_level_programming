@@ -12,6 +12,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
-    session = Session
+    session = Session()
 
-    results = session.que
+    results = session.query(State).all()
+
+    for result in results:
+        print(result)
