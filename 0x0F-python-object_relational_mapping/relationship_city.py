@@ -1,10 +1,7 @@
 #!/usr/bin/python3
 """This script is doing something"""
 from sqlalchemy import Column, String, Integer, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
-
-Base = declarative_base()
+from relationship_state import Base
 
 class City(Base):
     """A class representing a city in the US."""
