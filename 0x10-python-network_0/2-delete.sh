@@ -1,3 +1,3 @@
 #!/bin/bash
 #i hate curl
-curl -X DELETE $1
+curl -sX DELETE $1
