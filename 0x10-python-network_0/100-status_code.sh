@@ -1,3 +1,3 @@
 #!/bin/bash
 #i hate curl
-curl -sI $1 | grep Status | cut -d " " -f 2-
+curl -sI $1 | grep HTTP | cut -d " " -f2
