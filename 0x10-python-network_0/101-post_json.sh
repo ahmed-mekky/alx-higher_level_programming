@@ -1,3 +1,3 @@
 #!/bin/bash
 #i hate curl
-curl -sd "@$2" $1
+curl -sd "@$2" -H "Content-Type: application/json" $1
