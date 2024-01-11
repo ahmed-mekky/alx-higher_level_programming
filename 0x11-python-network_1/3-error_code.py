@@ -11,4 +11,4 @@ if __name__ == "__main__":
             b_content = r.read()
             print(b_content.decode('UTF-8'))
     except error.HTTPError as e:
-        print(e.code)
+        print(f"Error code: {e.code}")
