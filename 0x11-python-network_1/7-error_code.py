@@ -8,5 +8,6 @@ if __name__ == "__main__":
     try:
         r = requests.get(argv[1])
         print(r.text)
-    except requests.HTTPError as e:
+        r.raise_for_status()
+    except requests.exceptions.HTTPError as e:
         print(f"Error code: {r.status_code}")
