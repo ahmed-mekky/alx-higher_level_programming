@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""this module is doing something"""
 from urllib import request, parse
 from sys import argv
-"""this module is doing something"""
 
 url = argv[1]
 data = {"email": argv[2]}
