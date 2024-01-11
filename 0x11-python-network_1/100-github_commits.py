@@ -10,7 +10,6 @@ if __name__ == "__main__":
     url = f"https://api.github.com/repos/{owner}/{repo}/commits"
 
     r = requests.get(url)
-    json = r.json()
     if r.status_code == 200:
-        for i in range(10):
-            print(f"{json[i]['sha']}: {json[i]['commit']['author']['name']}")
+        for json in r.json()[:10]:
+            print(f"{json['sha']}: {json['commit']['author']['name']}")
