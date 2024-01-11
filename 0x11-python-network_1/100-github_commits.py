@@ -11,6 +11,6 @@ if __name__ == "__main__":
 
     r = requests.get(url)
     json = r.json()
-
-    for i in range(10):
-        print(f"{json[i]['sha']}: {json[i]['commit']['author']['name']}")
+    if r.status_code == 200:
+        for i in range(10):
+            print(f"{json[i]['sha']}: {json[i]['commit']['author']['name']}")
