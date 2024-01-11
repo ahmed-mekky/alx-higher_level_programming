@@ -3,9 +3,6 @@ from urllib import request, parse
 from sys import argv
 """this module is doing something"""
 
-import urllib.request
-import urllib.parse
-
 url = argv[1]
 data = {"email": argv[2]}
 data = urllib.parse.urlencode(data).encode()
