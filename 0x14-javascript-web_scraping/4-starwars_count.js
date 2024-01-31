@@ -7,9 +7,10 @@ request.get(process.argv[2], (err, res, body) => {
   }
   let x = 0;
   const dict = JSON.parse(body).results;
+  const regex = /^(https?:\/\/)?(swapi-api\.alx-tools\.com|swapi\.co)\/api\/people\/18\/$/;
   Object.keys(dict).forEach(element => {
     dict[element].characters.forEach(character => {
-      if (character === 'https://swapi-api.alx-tools.com/api/people/18/') {
+      if (regex.test(character)) {
         x += 1;
       }
     });
