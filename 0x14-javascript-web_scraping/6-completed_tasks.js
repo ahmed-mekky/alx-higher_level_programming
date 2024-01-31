@@ -22,7 +22,7 @@ request.get(process.argv[2], (err, res, body) => {
         count += 1;
       }
     });
-    if (count){
+    if (count) {
       list[id] = count;
     }
   }
