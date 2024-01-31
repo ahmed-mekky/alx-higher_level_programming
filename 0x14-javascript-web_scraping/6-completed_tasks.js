@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
-request.get('https://jsonplaceholder.typicode.com/todos', (err, res, body) => {
+request.get(process.argv[2], (err, res, body) => {
   if (err) {
     return console.log(err);
   }
@@ -20,5 +20,5 @@ request.get('https://jsonplaceholder.typicode.com/todos', (err, res, body) => {
     }
   });
   list[id] = count;
-  console.log(list);
+  console.log(JSON.stringify(list, null, 2));
 });
