@@ -12,7 +12,7 @@ request.get(process.argv[2], (err, res, body) => {
     let id = content[0].userId;
     content.forEach(element => {
       if (element.userId !== id) {
-        if (count > 0) {
+        if (count) {
           list[id] = count;
         }
         id = element.userId;
@@ -22,7 +22,9 @@ request.get(process.argv[2], (err, res, body) => {
         count += 1;
       }
     });
-    list[id] = count;
+    if (count){
+      list[id] = count;
+    }
   }
   console.log(list);
 });
