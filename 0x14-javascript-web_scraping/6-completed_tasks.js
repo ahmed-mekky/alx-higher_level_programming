@@ -20,5 +20,5 @@ request.get(process.argv[2], (err, res, body) => {
     }
   });
   list[id] = count;
-  console.log(JSON.stringify(list, null, 2));
+  console.log(list);
 });
